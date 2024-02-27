@@ -1,0 +1,26 @@
+{
+  "Virat": {
+    "username": "Virat",
+    "password": "$2a$10$vehXBT2Rh1jyk9qkz20q7.WazWJKJXpllTX83aU5F5zRihep6lYNa"
+  },
+  "kamla": {
+    "username": "kamla",
+    "password": "$2a$10$E74ZmaTweuUh92OdZ8C5f.eCG5N81uw.ILvvsRCS9tjM9JlboEuKG"
+  },
+  "amitkarki": {
+    "username": "amitkarki",
+    "password": "$2a$10$UWhfnOylpDbhSyN3s.PLW.krM1iKRSFc7T/y4rLYc9zM.I6.if5IW"
+  },
+  "deepak": {
+    "username": "deepak",
+    "password": "$2a$10$/8AvBeLemIKN7EVcElPZceZn5fFYCx88Gd9m4X9thcssepXVjS/ni"
+  },
+  "danuji": {
+    "username": "danuji",
+    "password": "$2a$10$lgCpStbcpXe2sTy0EQn6YO5l3YijtEply.60Jj6W9HwSpMAv1l0r2"
+  },
+  "tanuja ": {
+    "username": "tanuja ",
+    "password": "$2a$10$WisMjPyNGM9PRlNkCnyqne6x/C7tVEwOmPS1divryv0lzYdURiv4C"
+  }
+}

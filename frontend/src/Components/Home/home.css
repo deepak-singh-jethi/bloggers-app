@@ -1,0 +1,37 @@
+.home-main-heading {
+    background-color: white;
+    background-image: linear-gradient(to right, #3a3a3b, #38393a, #000000);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    /* Optional: Make it an inline-block to only take as much width as needed */
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.home-main-para {
+    font-size: 30px;
+}
+
+.home-info-area {
+    width: 50vw;
+}
+.home-explore-card{
+    background-image: url("https: //images.unsplash.com/photo-1516414447565-b14be0adf13e?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+@media only screen and (max-width:450px) {
+    .home-main-heading {
+        font-size: 30px;
+    }
+
+    .home-main-para {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:790px) {
+    .home-info-area {
+        width: 100vw;
+    }
+}
