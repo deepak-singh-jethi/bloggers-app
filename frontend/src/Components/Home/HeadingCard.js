@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-function HeadingCard({
+const HeadingCard = memo(function HeadingCard({
   url1,
   heading1,
   heading1Style,
@@ -25,6 +25,6 @@ function HeadingCard({
       <div className="mt-4 ">{children}</div>
     </div>
   );
-}
+});
 
 export default HeadingCard;

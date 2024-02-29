@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-function Footer() {
+const Footer = memo(function Footer() {
   return (
     <footer className="bg-gray-800 text-white p-8 ">
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 gap-3 ">
@@ -77,6 +77,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+});
 
 export default Footer;

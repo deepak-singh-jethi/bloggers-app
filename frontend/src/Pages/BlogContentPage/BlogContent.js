@@ -4,7 +4,6 @@ import { json, useLoaderData } from "react-router";
 
 function BlogContent() {
   const { vlog } = useLoaderData();
-  console.log(vlog);
 
   return <Blog blog={vlog}></Blog>;
 }

@@ -20,7 +20,7 @@ function RootLayout() {
 
   useEffect(() => {
     dispatch(getAllBlog());
-  }, [blog]);
+  }, [blog, dispatch]);
 
   return (
     <>

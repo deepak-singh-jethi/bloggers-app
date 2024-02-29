@@ -1,7 +1,14 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 
-function ExploreCard({ url1, url2, heading1, heading2, content1, btnText }) {
+const ExploreCard = memo(function ExploreCard({
+  url1,
+  url2,
+  heading1,
+  heading2,
+  content1,
+  btnText,
+}) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-[#d8d6d4] max-h-[50vh] overflow-x-hidden  mx-2 sm:mx-5 overflow-y-scroll">
       {/* left side explore */}
@@ -39,6 +46,6 @@ function ExploreCard({ url1, url2, heading1, heading2, content1, btnText }) {
       </div>
     </div>
   );
-}
+});
 
 export default ExploreCard;

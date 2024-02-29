@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, memo, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -7,12 +7,14 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import "./styles.css";
 
-export default function Carousel({ blogs }) {
-  const sortedBlogs = [...blogs].sort(
-    (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-  );
-  //select only 4 blogs
-  const selectedBlogs = sortedBlogs.slice(0, 4);
+const Carousel = memo(function Carousel({ blogs }) {
+  const selectedBlogs = useMemo(() => {
+    const sortedBlogs = [...blogs].sort(
+      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+    );
+
+    return sortedBlogs.slice(0, 5);
+  }, [blogs]);
 
   return (
     <Swiper
@@ -57,4 +59,5 @@ export default function Carousel({ blogs }) {
         ))}
     </Swiper>
   );
-}
+});
+export default Carousel;

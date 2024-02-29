@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import useractions from "../../Store/user";
 import { useDispatch } from "react-redux";
 
-function StudioNav({ children, auth }) {
+const StudioNav = memo(function StudioNav({ children, auth }) {
   const naviagte = useNavigate();
   const dispatch = useDispatch();
   const handleLogout = () => {
@@ -61,6 +61,5 @@ function StudioNav({ children, auth }) {
       )}
     </div>
   );
-}
-
+});
 export default StudioNav;

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import HeadingCard from "../Home/HeadingCard";
 
-function Blogs({ blogs }) {
+const Blogs = memo(function Blogs({ blogs }) {
   return (
     <>
       <HeadingCard
@@ -56,6 +56,6 @@ function Blogs({ blogs }) {
       </div>
     </>
   );
-}
+});
 
 export default Blogs;

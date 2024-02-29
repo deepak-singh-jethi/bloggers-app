@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { deleteBlogAction } from "../../Store/BlogsAction";
@@ -8,15 +8,13 @@ function Blog({ blog }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { blogs } = useSelector((state) => state.blogs);
-
   const slicedBlogs = blogs.slice(0, 5);
   const currentId = blog.id;
 
   const localStorageUsername = localStorage.getItem("username");
-
   const isAuthor = blog.author === localStorageUsername;
 
-  const handleDelete = () => {
+  const handleDelete = useCallback(() => {
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this blog?"
     );
@@ -26,7 +24,7 @@ function Blog({ blog }) {
       dispatch(deleteBlogAction(currentId));
       navigate("/studio");
     }
-  };
+  });
 
   return (
     <div className="flex flex-col md:flex-row gap-10 justify-center items-center mx-4 md:mx-20 my-8">
